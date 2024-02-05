@@ -174,7 +174,9 @@ function startRecording() {
     ''
   ];
 
-  let options;
+  let options = {
+    mimeType: 'video/webm;codecs=vp9,opus',
+  };
 
   for (const mimeType of mimeTypeOptions) {
     if (MediaRecorder.isTypeSupported(mimeType)) {

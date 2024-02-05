@@ -54,7 +54,7 @@ io.on('connection', function(socket){
       }
     });
   });
-  
+   
   socket.on("ready", function(roomName){
     console.log("ready");
     socket.broadcast.to(roomName).emit("ready");
